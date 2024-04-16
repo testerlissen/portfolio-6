@@ -1,0 +1,85 @@
+@font-face 
+  font-family: "Helvetica-r"
+  src: url("../fonts/helvetica_regular.ttf")
+  font-weight: 400
+  font-display: swap
+  font-style: normal
+  font-size: 2.4rem
+  line-height: normal
+    
+@font-face 
+  font-family: "Helvetica-l"
+  src: url("../fonts/helvetica_light.ttf")
+  font-weight: 400
+  font-display: swap
+  font-style: normal
+  font-size: 2.4rem
+  line-height: normal
+
+@font-face 
+  font-family: "Helvetica-lo"
+  src: url("../fonts/helvetica_lightoblique.ttf")
+  font-weight: 400
+  font-display: swap
+  font-style: normal
+  font-size: 2.4rem
+  line-height: normal
+
+@font-face 
+  font-family: "Inferi-Trial-bi"
+  src: url("../fonts/Inferi-Trial-BookItalic.ttf")
+  font-weight: 350
+  font-display: swap
+  font-size: 2.4rem
+  line-height: normal
+
+@font-face 
+  font-family: "Inferi-Trial-ni"
+  src: url("../fonts/Inferi-Trial-NormalItalic.ttf")
+  font-weight: 400
+  font-display: swap
+  font-size: 2.4rem    
+  line-height: normal
+
+
+*, ::after, ::before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  outline: none
+  cursor: none
+
+html
+  font-size: 10px
+  &::-webkit-scrollbar
+    width: 0rem
+
+body
+  font-family: "Helvetica-l"
+  font-size: 2.4rem
+  cursor: none
+  height: 100vh
+  overflow: auto
+
+.cursor
+  position: fixed
+  width: 3rem
+  height: 3rem
+  margin-left: -2rem
+  margin-top: -2rem
+  border-radius: 50%
+  background: white
+  mix-blend-mode: difference
+  transition: transform .3s ease
+  transform-origin: center center
+  pointer-events: none
+  z-index: 10000
+
+.grow, .grow-small, .grow-active
+  transform: scale(6.5)
+  background: #fff
+  mix-blend-mode: difference
+  border: none
+
+.grow-small
+  transform: scale(2.5)

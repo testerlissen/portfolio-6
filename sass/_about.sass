@@ -1,0 +1,172 @@
+.wrapper 
+    overflow-y: hidden
+    background: white
+    &::-webkit-scrollbar
+        display: none
+.container 
+    position: relative
+    z-index: 2
+    // left: 5rem
+    display: flex
+    width: 200vw
+    section 
+        background: white
+        width: 100vw
+
+section
+    height: 100vh
+
+.section-1
+    position: relative
+    background: white
+
+.second-title
+    left: 5rem
+    position: absolute
+    z-index: 10
+    display: inline-block
+    font-family: "Inferi-Trial-ni"
+    font-weight: 400
+    font-size: 23.43vw
+    color: white
+    mix-blend-mode: difference
+    margin-left: 1%
+    margin-top: 1%
+
+.item-text
+    pointer-events: none
+    display: block
+    line-height: 1
+    position: relative
+
+.item > div:nth-child(1) span
+    will-change: transform
+    transform-style: preserve-3d
+    transition: .5s
+    transition-delay: calc(.05s * var(--index))
+    transform-origin: bottom
+    display: inline-block
+
+.item > div:nth-child(2) span
+    will-change: transform
+    transform-style: preserve-3d
+    transition: .5s
+    transition-delay: calc(.05s * var(--index))
+    transform-origin: top
+    display: inline-block
+    transform: translate3d(0, 100%, 0) rotateX(-90deg)
+
+.item:hover > div:nth-child(1) span
+    transform: translate3d(0, -100%, 0) rotateX(-90deg)
+
+.item:hover > div:nth-child(2) span
+    transform: translate3d(0, 0%, 0) rotateX(0deg)
+
+span
+//   font-size: 23.43vw
+    font-size: 3rem
+
+.symbols
+    position: absolute
+    display: inline-block
+    font-family: "Inferi-Trial-ni"
+    font-weight: 400
+    font-size: 23.43vw
+    color: black
+    transform: translate(-60%, 15%)
+
+.column
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 100vh
+    grid-gap: 3rem
+    margin-left: 3rem
+    position: relative
+
+.text-about
+    color: black
+    font-family: "Helvetica-l"
+    font-size: 2.4rem
+    position: absolute
+    &__1
+        grid-column: 2 / 3
+        top: 48%
+    &__2
+        grid-column: 3 / 4
+        top: 63.4%
+    &__3
+        grid-column: 1 / 2
+        top: 46%
+    &__4
+        grid-column: 2 / 3
+        top: 21.4%
+    &__5
+        grid-column: 3 / 4
+        top: 30.6%
+        width: 80%
+
+
+.footnote
+    position: absolute
+    font-family: "Helvetica-l"
+    font-size: 1.5rem
+    grid-column: 1 / 2
+    align-self: end
+    margin-bottom: 2.5rem
+    &__1
+        left: 5rem
+    &__2
+        grid-column: 1 / -1
+        grid-row: 1 / 2
+    &-link
+        color: #E3051A
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+
+.title-img
+    grid-column: 2 / 3
+    font-family: "Helvetica-l"
+    font-weight: 400
+    font-size: 1.5rem
+    position: absolute
+    top: 60%
+
+.img
+    grid-column: 1 / 2
+    height: 19rem
+    width: 100%
+    object-fit: cover
+    &__1
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+    &__2
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+        border-radius: 50rem 0 0 0 
+    &__3
+        width: 30rem
+        grid-column: 1 / 2
+        grid-row: 1 / 2
+        border-radius: 0 0 50rem 0
+        transform: translateX(50%)
+
+.galery-1
+    position: absolute
+    grid-column: 2 / 3
+    grid-row: 1 / 2 
+    display: grid
+    grid-template-columns: 1fr 1fr
+    grid-template-rows: 19rem
+    grid-gap: 5%
+    top: 63%
+
+.galery-2
+    position: absolute
+    grid-column: 3 / 4
+    grid-row: 1 / 2 
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 19rem
+    grid-gap: 5%
+    top: 63%

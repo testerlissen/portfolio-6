@@ -1,0 +1,83 @@
+.header
+    position: absolute
+    z-index: 10
+    width: 100%
+    padding: 2rem 2% 0 2%
+    overflow: hidden
+    &__list
+        display: flex
+        flex-direction: column
+        align-items: flex-end
+    &__item
+        height: 7rem
+        width: -webkit-fit-content
+        width: -moz-fit-content
+        width: fit-content
+        list-style-type: none
+        text-align: right
+        font-size: 2.8rem
+        animation: rightToLeft
+        animation-duration: 1.5s
+        animation-timing-function: ease
+        &-1
+            animation-delay: 3.2s
+        &-2
+            animation-delay: 3.3s
+        &-3
+            animation-delay: 3.4s
+
+    &__link
+        text-decoration: none
+        color: white
+        transition: all .5s
+        font-family: "Helvetica-l"
+        &:hover
+            font-family: "Inferi-Trial-bi"
+            font-size: 3rem
+    &__logo-link
+        position: absolute
+
+@keyframes rightToLeft
+  0% 
+    transform: translateX(150%)
+  
+  100% 
+    transform: translateX(0%)
+
+
+.second-header
+    position: fixed
+    z-index: 5
+    width: 100vw
+    padding: 2rem 1% 0 1%
+    overflow: hidden
+    mix-blend-mode: difference
+    top: 0
+    display: grid
+    grid-template-columns: 1fr 1fr 1fr
+    grid-template-rows: 1fr
+    grid-gap: 3.5rem
+    &__list
+        display: flex
+        justify-content: space-between
+        grid-column: 2 / 3
+        grid-row: 1 / 2
+    &__item
+        height: 4rem
+        width: -webkit-fit-content
+        width: -moz-fit-content
+        width: fit-content
+        list-style-type: none
+        text-align: right
+        font-size: 2.6rem
+        font-family: "Helvetica-l"
+        font-weight: 400
+    &__link
+        display: inline-block
+        text-decoration: none
+        color: white
+        mix-blend-mode: difference
+        transition: all .5s
+        &:hover
+            font-family: "Inferi-Trial-bi"
+            font-size: 3rem
